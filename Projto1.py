@@ -18,7 +18,7 @@
 4. Para cada novo funcionário que é registrado na empresa, ele recebe um dos seguintes cartões, que é sorteado de forma aleatória:
 '''
 
-cartoes = ['R$50,00','R$250,00','R$120,00']
+# cartoes = ['R$50,00','R$250,00','R$120,00']
 
 '''
 5. Guarde informações sobre a data de aniversário do funcionário(dd/mm/aaaa)
@@ -66,5 +66,5 @@ liberado = random.choice(cartoes)
 
 Aniversário= datetime.strptime(input('Informe sua data de nascimento: '),"%d/%m/%Y")
 
-print(f'Olá {nome}, seu registro foi concluído com sucesso no dia {data_registro}. \nParabéns, houve um sorteio e você ganhou um cartão de compras no valor de {liberado}.')
+print(f'Olá {nome}, seu registro foi concluído com sucesso no dia {data_registro.day}/{data_registro.month}/{data_registro.year}.\nParabéns, houve um sorteio e você ganhou um cartão de compras no valor de {liberado}.')
 
