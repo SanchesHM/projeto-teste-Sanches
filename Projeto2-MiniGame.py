@@ -55,5 +55,41 @@ while True:
     parar = input('Continuar andando? s/n ')
     if parar =='n':
         break
-     
-    
+ ...........................................................................................................    
+
+from turtle import Turtle
+t=Turtle()
+t.speed(1)
+
+def obter_distancia():
+    d=int(input('Qual a distancia a percorrer? '))
+    return d
+
+def rotacao_d(turtle):
+    angulo= int(input('Quantos graus deseja virar? '))
+    t.right(angulo)
+
+def rotacao_e(turtle):
+    angulo= int(input('Quantos graus deseja virar? '))
+    t.left(angulo)
+
+while True:
+   direção= input('Para qual direção desseja ir? f:frente t: tras ')
+   if direção =='f':
+     distancia=obter_distancia()
+     t.forward(distancia)
+   elif direção =='t':
+     distancia=obter_distancia()
+     t.backward (distancia)
+   else:
+    print('Opção Inválida')
+
+   rotação= input('Deseja virar o cursor? d: direita e: esquerda n:nao ')
+   if rotação=='d':
+    rotacao_d(t)
+   elif rotação == 'e':
+    rotacao_e(t)
+   elif rotação== 'n':
+    parar = input('Continuar andando? s/n ')
+    if parar =='n':
+        break
